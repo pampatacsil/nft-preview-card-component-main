@@ -1,0 +1,144 @@
+@import url(https://fonts.google.com/specimen/Outfit);
+:root {
+    --text-color-aqua: hsl(178, 100%, 50%);
+    --img-card-bg-aqua: hsla(178, 100%, 50%, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    background: hsl(217, 54%, 11%);
+}
+
+.main-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    background: hsl(216, 50%, 16%);
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.img-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img-card::after {
+    content: url(/nft-preview-card-component-main/images/icon-view.svg);
+    background: var(--img-card-bg-aqua);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.img-card:hover::after {
+    opacity: 1;
+}
+
+.img-card .img {
+    width: 100%;
+    display: block;
+}
+
+.img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.card-equilibrium {
+    color: #ffffff;
+    margin-top: .5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card-equilibrium:hover {
+    color: var(--text-color-aqua);
+}
+
+.sub-card-equilibrium {
+    color: rgba(255, 255, 255, 0.87);
+    margin-top: .5rem;
+    font-size: 1rem;
+}
+
+.card-ethereum {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-ethereum,
+.card-avatar {
+    margin-top: 10px;
+}
+
+.card-badge,
+.card-time {
+    display: flex;
+    margin-left: 5px;
+}
+
+.txt-badge {
+    color: var(--text-color-aqua);
+}
+
+.txt-time {
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.line {
+    margin-top: 15px;
+    border: 1px solid #7575759d;
+}
+
+.card-avatar {
+    display: flex;
+}
+
+.img-avatar {
+    width: 30px;
+    background: #ffffff;
+    padding: 1px;
+    border-radius: 50%;
+}
+
+.creation,
+.author-name {
+    color: #ffffff;
+    padding: 5px;
+}
+
+.creation {
+    color: #d6d2d2;
+    font-size: .8rem;
+}
+
+.author-name {
+    font-weight: 100;
+    font-size: .8rem;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.author-name:hover {
+    color: var(--text-color-aqua);
+}
